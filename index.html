@@ -87,6 +87,15 @@
   .prose p { margin: 0 0 16px; max-width: 66ch; }
   @media (max-width: 860px) { .block-head { grid-template-columns: 1fr; gap: 20px; } section.block { padding-top: 64px; } }
 
+  /* about */
+  .about-intro { font-size: 22px; line-height: 1.45; margin: 0 0 32px; max-width: 40ch; }
+  .about-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .about-grid > div { border-top: 2px solid var(--accent); padding-top: 14px; }
+  .about-grid h3 { font-size: 16px; margin-bottom: 8px; color: var(--accent); }
+  .about-grid p { margin: 0; font-size: 15.5px; line-height: 1.6; }
+  .about-story { margin: 32px 0 0; color: var(--muted); max-width: 66ch; }
+  @media (max-width: 860px) { .about-grid { grid-template-columns: 1fr; gap: 22px; } .about-intro { font-size: 20px; } }
+
   /* timeline: a real sequence, so dates lead */
   .timeline { list-style: none; margin: 0; padding: 0; }
   .timeline > li { display: grid; grid-template-columns: 120px 1fr; gap: 24px; padding: 22px 0; border-top: 1px solid var(--line); }
@@ -197,10 +206,23 @@
   <section class="block" id="about">
     <div class="wrap block-head">
       <h2>About</h2>
-      <div class="prose">
-        <p>I work where construction meets controls. At American Contracting and Environmental Services (ACE), I lead construction administration and startup on a municipal wastewater treatment plant upgrade: RFIs, submittals, startup plans, I/O and loop testing, change orders, and the schedule that ties them together.</p>
-        <p>Before construction, I was a researcher. At Clarkson University, on a NASA-funded program, I studied how concrete made from lunar regolith simulants behaves at the micro scale. That work taught me something I use on every jobsite: performance is decided in the details.</p>
-        <p>I grew up in Azad Kashmir, studied civil engineering at UET Taxila, and started my career on roadway and building sites in Pakistan before moving to the United States for graduate school.</p>
+      <div>
+        <p class="about-intro">I help deliver critical water infrastructure, from the first submittal to the day the plant runs.</p>
+        <div class="about-grid">
+          <div>
+            <h3>Today</h3>
+            <p>As a Senior Project Engineer at ACE, I handle the full scope of project engineering on a municipal wastewater treatment plant upgrade: cost tracking, monthly pay applications, change orders, scheduling, RFIs, and submittals, coordinating the engineer, the owner, and subcontractors through startup.</p>
+          </div>
+          <div>
+            <h3>Research</h3>
+            <p>Before construction, I was a researcher. At Clarkson University, on a NASA-funded program, I studied how concrete made from lunar regolith simulants behaves at the micro scale. That work taught me something I use on every jobsite: performance is decided in the details.</p>
+          </div>
+          <div>
+            <h3>Service</h3>
+            <p>I serve on ACI Committees 123 and 565 and the ASCE Space Engineering and Construction Technical Committee, and I've completed 30+ peer reviews. In 2026, ACI selected me to represent the Institute at the Emerging Leaders Alliance.</p>
+          </div>
+        </div>
+        <p class="about-story">What I bring: PMP-certified project control, a researcher's rigor with data, and field instincts built on roadway and building sites in Pakistan and treatment plants in Maryland.</p>
       </div>
     </div>
   </section>
@@ -215,10 +237,10 @@
             <h3>Senior Project Engineer</h3>
             <p class="org">American Contracting and Environmental Services, Maryland</p>
             <ul>
-              <li>Lead engineering, construction administration, and startup for a municipal wastewater treatment plant upgrade</li>
-              <li>Run the multi-phase startup and commissioning schedule for pumping, polymer, and chemical feed systems</li>
-              <li>Direct I/O mapping and loop testing, verifying field instruments against the control system and SCADA</li>
-              <li>Prepare change order and time impact documentation; maintain the schedule of values and pay applications</li>
+              <li>Manage project engineering for a municipal wastewater treatment plant upgrade, from submittals through startup</li>
+              <li>Track project cost and prepare monthly pay applications, the schedule of values, and change order documentation</li>
+              <li>Build and maintain the project schedule, sequencing work with subcontractors and the owner</li>
+              <li>Author RFIs and manage submittals, shop drawings, and startup and training plans with the engineer of record</li>
               <li>Mentor a junior project engineer on RFIs, submittals, and field coordination</li>
             </ul>
           </div>
