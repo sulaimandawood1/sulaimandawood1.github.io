@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sulaiman Dawood, PMP | Project Engineer and Materials Researcher</title>
+<meta name="description" content="Sulaiman Dawood is a Senior Project Engineer in Maryland and a materials researcher studying concrete for lunar construction.">
+<meta property="og:title" content="Sulaiman Dawood, PMP">
+<meta property="og:description" content="Senior Project Engineer and lunar concrete researcher.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #E6E7E3;
+    --panel: #F2F3F0;
+    --ink: #15212C;
+    --muted: #55606A;
+    --line: #C9CBC4;
+    --accent: #17687A;
+    --accent-soft: #CFE3E7;
+    --soft-phase: #A3A69C;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #10181F; --panel: #172129; --ink: #E3E7EA; --muted: #9AA6B0;
+      --line: #2A3640; --accent: #5EC4D6; --accent-soft: #1C3640; --soft-phase: #5A6168;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Archivo", system-ui, sans-serif; font-size: 17px; line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  a:hover { text-decoration-thickness: 2px; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+  /* header */
+  header.site { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); }
+  header.site .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .mark { font-weight: 700; font-stretch: 125%; letter-spacing: -0.01em; color: var(--ink); text-decoration: none; }
+  nav ul { list-style: none; display: flex; gap: 22px; margin: 0; padding: 0; }
+  nav a { color: var(--muted); text-decoration: none; font-size: 15px; }
+  nav a:hover { color: var(--ink); }
+  @media (max-width: 720px) { nav { display: none; } }
+
+  /* hero */
+  .hero { padding: 72px 0 56px; }
+  .hero .wrap { display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px; align-items: center; }
+  h1 { font-size: clamp(44px, 7vw, 84px); line-height: 0.95; font-weight: 800; font-stretch: 125%; letter-spacing: -0.03em; margin: 0 0 28px; }
+  .lede { font-size: 21px; line-height: 1.5; max-width: 34ch; margin: 0 0 32px; color: var(--ink); }
+  .lede span { color: var(--muted); }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn { display: inline-block; padding: 11px 18px; border: 1.5px solid var(--ink); color: var(--ink); text-decoration: none; font-weight: 600; font-size: 15px; border-radius: 3px; }
+  .btn.primary { background: var(--ink); color: var(--bg); }
+  .btn:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .portrait { margin: 0; justify-self: end; width: min(100%, 380px); }
+  .portrait img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; border-radius: 4px; background: var(--panel); }
+  @media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; gap: 40px; } .hero { padding-top: 48px; } .portrait { justify-self: start; width: min(60%, 220px); order: -1; } }
+
+  /* micrograph strip: real SEM data, edge to edge */
+  .micro { margin: 0; }
+  .micro .strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; background: var(--ink); }
+  .micro img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; filter: grayscale(1) contrast(1.05); }
+  .micro figcaption { font-size: 13.5px; color: var(--muted); line-height: 1.45; padding: 12px 0 18px; max-width: 72ch; }
+  @media (max-width: 760px) { .micro .strip { grid-template-columns: repeat(5, 70vw); overflow-x: auto; scroll-snap-type: x mandatory; } .micro img { scroll-snap-align: start; } }
+
+  /* facts */
+  .facts { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .facts dl { display: grid; grid-template-columns: repeat(4, 1fr); margin: 0; }
+  .facts dl > div { padding: 22px 20px 22px 0; }
+  .facts dl > div + div { padding-left: 20px; border-left: 1px solid var(--line); }
+  .facts dt { font-weight: 700; font-size: 17px; }
+  .facts dd { margin: 2px 0 0; color: var(--muted); font-size: 14.5px; }
+  @media (max-width: 760px) { .facts dl { grid-template-columns: 1fr 1fr; } .facts dl > div:nth-child(3) { border-left: 0; padding-left: 0; } .facts dl > div:nth-child(n+3) { border-top: 1px solid var(--line); } }
+
+  /* sections */
+  section.block { padding: 88px 0 0; }
+  .block-head { display: grid; grid-template-columns: 260px 1fr; gap: 40px; }
+  h2 { font-size: 30px; line-height: 1.1; font-weight: 750; font-stretch: 125%; letter-spacing: -0.02em; margin: 0; }
+  h3 { font-size: 19px; line-height: 1.3; font-weight: 700; margin: 0; }
+  .prose p { margin: 0 0 16px; max-width: 66ch; }
+  @media (max-width: 860px) { .block-head { grid-template-columns: 1fr; gap: 20px; } section.block { padding-top: 64px; } }
+
+  /* timeline: a real sequence, so dates lead */
+  .timeline { list-style: none; margin: 0; padding: 0; }
+  .timeline > li { display: grid; grid-template-columns: 120px 1fr; gap: 24px; padding: 22px 0; border-top: 1px solid var(--line); }
+  .timeline > li:first-child { border-top: 0; padding-top: 0; }
+  .when { color: var(--muted); font-size: 15px; font-variant-numeric: tabular-nums; padding-top: 2px; }
+  .org { color: var(--muted); margin: 2px 0 10px; font-size: 15.5px; }
+  .timeline ul { margin: 0; padding-left: 18px; max-width: 66ch; }
+  .timeline ul li { margin: 4px 0; }
+  @media (max-width: 560px) { .timeline > li { grid-template-columns: 1fr; gap: 4px; } }
+
+  /* research projects */
+  .projects { display: grid; gap: 20px; }
+  .project { background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 3px; padding: 24px 26px; }
+  .project p { margin: 8px 0 12px; max-width: 64ch; }
+  .methods { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; list-style: none; }
+  .methods li { font-size: 13.5px; padding: 3px 10px; background: var(--accent-soft); border-radius: 20px; }
+  .project .out { font-size: 15px; color: var(--muted); margin: 14px 0 0; }
+
+  /* publications */
+  .pubs { list-style: none; margin: 0; padding: 0; counter-reset: pub; }
+  .pubs li { padding: 16px 0; border-top: 1px solid var(--line); max-width: 72ch; }
+  .pubs li:first-child { border-top: 0; padding-top: 0; }
+  .pubs .t { font-weight: 650; display: block; }
+  .pubs .v { color: var(--muted); font-size: 15px; }
+  .status { font-size: 12.5px; padding: 1px 8px; border: 1px solid var(--line); border-radius: 20px; margin-left: 6px; color: var(--muted); white-space: nowrap; }
+
+  /* service */
+  .cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  .cols h3 { font-size: 17px; margin-bottom: 10px; }
+  .cols ul { list-style: none; padding: 0; margin: 0; }
+  .cols li { padding: 7px 0; border-top: 1px solid var(--line); font-size: 15.5px; }
+  @media (max-width: 860px) { .cols { grid-template-columns: 1fr; } }
+
+  /* contact */
+  .contact { margin-top: 96px; background: var(--ink); color: var(--bg); padding: 72px 0; }
+  .contact h2 { color: var(--bg); font-size: clamp(30px, 4.5vw, 48px); max-width: 18ch; }
+  .contact p { color: color-mix(in srgb, var(--bg) 75%, var(--ink)); max-width: 52ch; margin: 18px 0 28px; }
+  .contact .btn { border-color: var(--bg); color: var(--bg); }
+  .contact .btn.primary { background: var(--bg); color: var(--ink); }
+  .contact .btn:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+  footer { padding: 28px 0 40px; font-size: 14px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="mark" href="#top">Sulaiman Dawood</a>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Sulaiman Dawood, PMP</h1>
+        <p class="lede">Senior Project Engineer building water infrastructure in Maryland. <span>Materials researcher studying how concrete could be built on the Moon.</span></p>
+        <div class="actions">
+          <a class="btn primary" href="mailto:sulaiman993507@gmail.com">Email me</a>
+          <a class="btn" href="CV.pdf">Download CV</a>
+          <a class="btn" href="https://www.linkedin.com/in/msulaimandawood/">LinkedIn</a>
+        </div>
+      </div>
+      <figure class="portrait">
+        <img src="photo.jpg" width="482" height="641" alt="Portrait of Sulaiman Dawood">
+      </figure>
+    </div>
+  </section>
+
+  <figure class="micro">
+    <div class="strip">
+      <img src="images/sem-1.jpg" width="640" height="640" alt="Scanning electron micrograph at low magnification showing angular particles in a binder matrix, 100 micrometer scale bar">
+      <img src="images/sem-2.jpg" width="640" height="640" alt="Scanning electron micrograph of elongated particles in a binder matrix, 10 micrometer scale bar" loading="lazy">
+      <img src="images/sem-3.jpg" width="640" height="640" alt="Scanning electron micrograph of angular particles and fine binder" loading="lazy">
+      <img src="images/sem-4.jpg" width="640" height="640" alt="Scanning electron micrograph of large angular particles, cracks, and pores, 10 micrometer scale bar" loading="lazy">
+      <img src="images/sem-5.jpg" width="640" height="640" alt="Scanning electron micrograph of angular particles with pores in the binder" loading="lazy">
+    </div>
+    <div class="wrap"><figcaption>Scanning electron micrographs of lunar concrete specimens from my M.S. research at Clarkson University.</figcaption></div>
+  </figure>
+
+  <div class="facts">
+    <div class="wrap">
+      <dl>
+        <div><dt>M.S., Clarkson University</dt><dd>Civil Engineering, 4.0 GPA</dd></div>
+        <div><dt>NASA-funded research</dt><dd>Lunar regolith concrete, 2022 to 2024</dd></div>
+        <div><dt>30+ peer reviews</dt><dd>ASCE, ACI, and space research journals</dd></div>
+        <div><dt>PMP certified</dt><dd>Project Management Institute, 2026</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <section class="block" id="about">
+    <div class="wrap block-head">
+      <h2>About</h2>
+      <div class="prose">
+        <p>I work where construction meets controls. At American Contracting and Environmental Services (ACE), I lead construction administration and startup on a municipal wastewater treatment plant upgrade: RFIs, submittals, startup plans, I/O and loop testing, change orders, and the schedule that ties them together.</p>
+        <p>Before construction, I was a researcher. At Clarkson University, on a NASA-funded program, I studied how concrete made from lunar regolith simulants behaves at the micro scale. That work taught me something I use on every jobsite: performance is decided in the details.</p>
+        <p>I grew up in Azad Kashmir, studied civil engineering at UET Taxila, and started my career on roadway and building sites in Pakistan before moving to the United States for graduate school.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="work">
+    <div class="wrap block-head">
+      <h2>Work</h2>
+      <ol class="timeline">
+        <li>
+          <div class="when">2026 to now</div>
+          <div>
+            <h3>Senior Project Engineer</h3>
+            <p class="org">American Contracting and Environmental Services, Maryland</p>
+            <ul>
+              <li>Lead engineering, construction administration, and startup for a municipal wastewater treatment plant upgrade</li>
+              <li>Run the multi-phase startup and commissioning schedule for pumping, polymer, and chemical feed systems</li>
+              <li>Direct I/O mapping and loop testing, verifying field instruments against the control system and SCADA</li>
+              <li>Prepare change order and time impact documentation; maintain the schedule of values and pay applications</li>
+              <li>Mentor a junior project engineer on RFIs, submittals, and field coordination</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="when">2024 to 2026</div>
+          <div>
+            <h3>Project Engineer</h3>
+            <p class="org">American Contracting and Environmental Services, Maryland</p>
+            <ul>
+              <li>Processed RFIs, submittals, and shop drawings against contract specifications</li>
+              <li>Conducted field inspections and wrote site observation reports across civil, structural, and mechanical scopes</li>
+              <li>Built dashboards tracking safety, quality, cost, and schedule KPIs; promoted in April 2026</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="when">2022 to 2024</div>
+          <div>
+            <h3>Graduate Research Assistant and Instructor</h3>
+            <p class="org">Clarkson University, Potsdam, New York</p>
+            <ul>
+              <li>Fully funded M.S. research under a NASA cooperative agreement, advised by Prof. Robert J. Thomas</li>
+              <li>Taught three sections (75 students) of ES100, Introduction to the Use of the Computer, focused on MATLAB</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="when">2021 to 2022</div>
+          <div>
+            <h3>Assistant Project Manager</h3>
+            <p class="org">Marco Polo Builders, Pakistan</p>
+            <ul>
+              <li>Managed roadway construction projects; introduced Primavera P6 scheduling and Bluebeam markups</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="when">2019 to 2020</div>
+          <div>
+            <h3>Engineering and project development internships</h3>
+            <p class="org">Bunyad Developers, Education Engineering Cell, World Youth Alliance</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block" id="research">
+    <div class="wrap block-head">
+      <h2>Research</h2>
+      <div class="projects">
+        <article class="project">
+          <h3>Geopolymer concrete from lunar regolith simulants</h3>
+          <p>Developed alkali-activated binders from simulated lunar soil, reaching compressive strengths near 40 MPa, and tested how mixture design and curing change strength with additive manufacturing in mind.</p>
+          <ul class="methods"><li>Nanoindentation</li><li>SEM-EDS</li><li>XRD</li><li>Mix design</li></ul>
+          <p class="out">M.S. thesis, ASCE Journal of Aerospace Engineering paper, Earth &amp; Space 2024</p>
+        </article>
+        <article class="project">
+          <h3>Concrete returned from low Earth orbit</h3>
+          <p>Contributed to the analysis of cementitious and regolith-based samples exposed outside the International Space Station as part of MISSE-15.</p>
+          <ul class="methods"><li>Micromechanics</li><li>Microstructure</li><li>Space exposure</li></ul>
+          <p class="out">Earth &amp; Space 2026 paper, accepted</p>
+        </article>
+        <article class="project">
+          <h3>Belitic calcium sulfoaluminate cement</h3>
+          <p>Tracked how the microstructure of a lower-carbon cement develops over hydration time, separating phases statistically with Gaussian Mixture Modeling.</p>
+          <ul class="methods"><li>Python</li><li>MATLAB</li><li>Gaussian Mixture Models</li></ul>
+          <p class="out">Journal paper under review</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="publications">
+    <div class="wrap block-head">
+      <h2>Publications and talks</h2>
+      <ol class="pubs">
+        <li><a class="t" href="https://doi.org/10.1061/JAEEEZ.ASENG-6302">Microstructure and Micromechanical Properties of Lunar Regolith Simulant-Based Geopolymers</a>
+          <span class="v">Dawood, Collins, Radlińska, Thomas. ASCE Journal of Aerospace Engineering, 2025.</span></li>
+        <li><a class="t" href="https://doi.org/10.1061/9780784485736.079">Micromechanical and Microstructural Analysis of Lunar Concrete</a>
+          <span class="v">Dawood, Collins, Radlińska, Thomas. Earth and Space 2024, ASCE.</span></li>
+        <li><span class="t">Effect of Concrete Exposure in Low Earth Orbit <span class="status">Accepted</span></span>
+          <span class="v">Ahmad, Dawood, Collins, Radlińska, Thomas. Earth and Space 2026, ASCE.</span></li>
+        <li><span class="t">On the Evolution of Microstructure and Micromechanical Properties in Belitic Calcium Sulfoaluminate Cement <span class="status">Under review</span></span>
+          <span class="v">Dawood, Thomas.</span></li>
+        <li><span class="t">Building Beyond Earth: A Micromechanical and Microstructural Study of Lunar Concrete</span>
+          <span class="v">M.S. thesis, Clarkson University, 2024.</span></li>
+        <li><a class="t" href="https://www.youtube.com/watch?v=Kqzoa17t3yI">Talk: Micromechanical and Microstructural Analysis of Lunar Concrete</a>
+          <span class="v">ACI 123 Research in Progress session, ACI Fall Convention, Boston, 2023. Video.</span></li>
+        <li><span class="t">Talk: Micromechanical and Microstructural Analysis of Lunar Concrete</span>
+          <span class="v">ASCE Space Conference, Miami, 2024.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block" id="service">
+    <div class="wrap block-head">
+      <h2>Service and credentials</h2>
+      <div class="cols">
+        <div>
+          <h3>Committees</h3>
+          <ul>
+            <li>ACI 123, Research and Current Developments</li>
+            <li>ACI 565, Lunar Concrete</li>
+            <li>ACI S805, Student Leadership Council</li>
+            <li>ASCE Space Engineering and Construction Technical Committee</li>
+            <li>ACI representative, Emerging Leaders Alliance, 2026</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Peer reviewer</h3>
+          <ul>
+            <li>ASCE Journal of Aerospace Engineering</li>
+            <li>ACI Structural Journal</li>
+            <li>ACI Materials Journal</li>
+            <li>Acta Astronautica</li>
+            <li>Advances in Space Research</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Certifications</h3>
+          <ul>
+            <li>Project Management Professional (PMP)</li>
+            <li>USACE Construction Quality Management</li>
+            <li>OSHA 30-Hour Construction</li>
+            <li>Oracle Primavera P6 Professional</li>
+            <li>Six Sigma Principles</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>Let's talk infrastructure, materials, or mentoring.</h2>
+      <p>I'm glad to connect with engineers, researchers, and students working on water systems, construction materials, or building beyond Earth.</p>
+      <div class="actions">
+        <a class="btn primary" href="mailto:sulaiman993507@gmail.com">sulaiman993507@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/msulaimandawood/">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Sulaiman Dawood, Baltimore, Maryland. Updated October 2026.</div>
+</footer>
+
+</body>
+</html>
