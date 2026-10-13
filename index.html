@@ -122,6 +122,18 @@
   .pubs .v { color: var(--muted); font-size: 15px; }
   .status { font-size: 12.5px; padding: 1px 8px; border: 1px solid var(--line); border-radius: 20px; margin-left: 6px; color: var(--muted); white-space: nowrap; }
 
+  /* research figures */
+  .method { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--line); }
+  .method h3 { font-size: 22px; margin-bottom: 20px; }
+  .fig { margin: 0; }
+  .fig img { display: block; width: 100%; height: auto; background: #fff; border: 1px solid var(--line); border-radius: 4px; }
+  .fig figcaption { font-size: 14px; color: var(--muted); line-height: 1.5; margin-top: 10px; max-width: 70ch; }
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 16px 0 0; padding: 0; list-style: none; counter-reset: step; }
+  .steps li { counter-increment: step; font-size: 15px; line-height: 1.55; }
+  .steps li::before { content: counter(step); display: inline-grid; place-items: center; width: 26px; height: 26px; margin-right: 8px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700; font-size: 14px; }
+  .fig-pair { display: grid; grid-template-columns: 2.1fr 1fr; gap: 28px; margin-top: 40px; align-items: start; }
+  @media (max-width: 860px) { .steps, .fig-pair { grid-template-columns: 1fr; } .fig-eds { max-width: 420px; } }
+
   /* linkedin posts */
   .posts { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 28px; }
   .posts iframe { display: block; width: 100%; height: 620px; border: 1px solid var(--line); border-radius: 4px; background: #fff; }
@@ -311,6 +323,29 @@
           <ul class="methods"><li>Python</li><li>MATLAB</li><li>Gaussian Mixture Models</li></ul>
           <p class="out">Journal paper under review</p>
         </article>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="method">
+        <h3>How the research works</h3>
+        <figure class="fig">
+          <img src="research-method.jpg" width="1600" height="457" alt="Three panels: a backscattered electron image of lunar concrete, a 15 by 15 grid of triangular nanoindents, and the modulus map overlaid on the same area" loading="lazy">
+          <ol class="steps">
+            <li><strong>Image the surface.</strong> An electron microscope shows the particles and binder in a polished specimen.</li>
+            <li><strong>Indent a grid.</strong> A diamond tip presses 225 tiny indents across the area, each measuring hardness and stiffness.</li>
+            <li><strong>Map the properties.</strong> Each result is laid back over the image to show which phase is strong and which is weak.</li>
+          </ol>
+        </figure>
+        <div class="fig-pair">
+          <figure class="fig">
+            <img src="research-maps.jpg" width="1600" height="460" alt="Heat maps of hardness and elastic modulus across a 150 micrometer grid, and a scatter plot separating two phases: geopolymer gel and harder unreacted mineral grains" loading="lazy">
+            <figcaption>Hardness and stiffness maps for lunar highland simulant concrete. Statistical modeling separates the binder gel (red, softer) from unreacted mineral grains (blue, harder).</figcaption>
+          </figure>
+          <figure class="fig fig-eds">
+            <img src="research-eds.jpg" width="760" height="840" alt="Electron microscope images of a specimen surface with cracks, and six elemental maps for calcium, oxygen, aluminum, sulfur, silicon, and magnesium" loading="lazy">
+            <figcaption>Electron microscope images and elemental maps, used to identify each phase the indenter hit.</figcaption>
+          </figure>
+        </div>
       </div>
     </div>
   </section>
